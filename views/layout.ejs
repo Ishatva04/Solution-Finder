@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <main>
+        <h1><%= title %></h1>
+        <% if (typeof messages !== 'undefined') { %>
+            <% messages.forEach(msg => { %>
+                <p><%= msg %></p>
+            <% }); %>
+        <% } %>
+        <%- content %>
+    </main>
+</body>
+</html>
